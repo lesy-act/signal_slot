@@ -11,7 +11,8 @@ int main(int argc, char *argv[])
     Receiver r1;
     QObject::connect(&e1,SIGNAL(signal_1()),&r1,SLOT(slot_1()));
     QObject::connect(&e1,SIGNAL(signal_1()),&r1,SLOT(slot_2()));
+    QObject::connect(&e1,SIGNAL(signal_2()),&r1,SLOT(slot_3()));
     e1.emit_signal_1();
-
+    e1.emit_signal_2();
     return a.exec();
 }
